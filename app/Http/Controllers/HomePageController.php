@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
+use App\Models\Gellery;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -13,7 +15,8 @@ class HomePageController extends Controller
      */
     public function index()
     {
-       return view('public.homepage');
+        $gallery = Gallery::get();
+       return view('public.homepage',compact('gallery'));
     }
 
     /**

@@ -13,7 +13,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        return view('public.services');
     }
 
     /**
@@ -35,6 +35,10 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         //
+    }
+    public function booking()
+    {
+        return view('public.booking');
     }
 
     /**

@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[\App\Http\Controllers\HomePageController::class,'index'])->name('home-page');
-Route::get('/services',[\App\Http\Controllers\ServiceController::class,'index'])->name('home-page');
-Route::get('/service/{slug}',[\App\Http\Controllers\ServiceController::class,'show'])->name('home-page');
-Route::get('/about-us',[\App\Http\Controllers\AboutController::class,'index'])->name('home-page');
-Route::get('/booking',[\App\Http\Controllers\ServiceController::class,'index'])->name('home-page');
-Route::get('/contact-us',[\App\Http\Controllers\ContactController::class,'index'])->name('home-page');
+Route::get('/services',[\App\Http\Controllers\ServiceController::class,'index'])->name('services');
+Route::get('/service/{slug}',[\App\Http\Controllers\ServiceController::class,'show'])->name('service.show');
+Route::get('/about-us',[\App\Http\Controllers\AboutController::class,'index'])->name('about');
+Route::get('/booking',[\App\Http\Controllers\ServiceController::class,'booking'])->name('booking');
+Route::get('/contact-us',[\App\Http\Controllers\ContactController::class,'index'])->name('contact');
 
 Route::middleware([
     'auth:sanctum',
