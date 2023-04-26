@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav-link
+{
+    @apply uppercase block h-full text-white hover:text-secondary text-lg
+}
+
