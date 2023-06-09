@@ -1,10 +1,7 @@
 <x-guest-layout>
-    <secion class="relative">
-        @if(isset($service))
-            @livewire('service-booking', ['service' =>$service])
-        @else
-            @livewire('service-booking')
-        @endif
+    <secion class="bg-white">
+        <img src="{{asset('images/edvin-johansson-rlwE8f8anOc-unsplash.webp')}}" class="w-full object-cover object-center relative h-screen w-full">
+        <div class="bg-background-dark bg-opacity-60 z-50 w-full flex flex-col justify-center text-center absolute inset-0 h-screen"></div>
     </secion>
     <section class="py-20 bg-gray-200 w-full">
         <div class="container py-16 relative" >
@@ -29,20 +26,13 @@
                                 100-999-6655
                             </a>
                         </div>
-
-
                     </div>
-
-
-
                 </div>
                 <div class="grid grid-cols-2 gap-6 w-full xl:w-1/2">
                     <img src="{{asset('images/beer-glasses-400x528.jpg')}}" alt="beer" class="w-full rounded-xl object-cover">
                     <img src="{{asset('images/hotel-room-1-400x528.jpg')}}" alt="beer" class="w-full rounded-xl object-cover">
                 </div>
             </div>
-
-
         </div>
     </section>
     <section>

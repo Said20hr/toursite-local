@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -13,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('public.services');
+        $services = Service::all();
+        return view('public.services',compact('services'));
     }
 
     /**
@@ -38,7 +41,13 @@ class ServiceController extends Controller
     }
     public function booking()
     {
-        return view('public.booking');
+        $services = Service::all();
+        return view('public.booking',compact('services'));
+    }
+    public function bookingService($slug)
+    {
+        $service = Service::where('slug',$slug)->firstOrFail();
+        return view('public.booking',compact('service'));
     }
 
     /**
@@ -47,9 +56,10 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $service = Service::where('slug',$slug)->firstOrFail();
+        return view('public.service',compact('service'));
     }
 
     /**

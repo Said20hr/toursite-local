@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use App\Models\Gellery;
+use App\Models\testimonial;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -16,7 +17,8 @@ class HomePageController extends Controller
     public function index()
     {
         $gallery = Gallery::get();
-       return view('public.homepage',compact('gallery'));
+        $testimonials = testimonial::get();
+       return view('public.homepage',compact('gallery','testimonials'));
     }
 
     /**
