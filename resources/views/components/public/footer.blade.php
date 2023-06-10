@@ -1,5 +1,4 @@
-
-<footer class="bg-gray-900 ">
+<footer class="bg-gray-900 aboslute w-full bottom-0">
     <div class="mx-auto w-full w-full">
         <div class="max-w-7xl mx-auto grid grid-cols-2 gap-8 px-4 lg:py-12 md:grid-cols-4">
             <div>
@@ -56,7 +55,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
         <div class="xl:px-12 px-2 py-6 bg-black w-full md:flex md:items-center md:justify-center">
             <span class="text-sm text-gray-200 dark:text-gray-200 sm:text-center">

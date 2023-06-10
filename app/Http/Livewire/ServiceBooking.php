@@ -2,14 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Booking;
 use App\Models\Service;
 use Livewire\Component;
 
 class ServiceBooking extends Component
 {
     public $service;
+    public $serviceSelected;
     public $services;
-    public $step = 3;
+    public $step = 1;
     public $checkin;
     public $checkout;
     public $adults;
@@ -36,6 +38,10 @@ class ServiceBooking extends Component
             'adults' => 'required|numeric|min:1|max:10',
             'children' => 'nullable|numeric|min:0|max:10',
         ]);
+        if (! $this->service)
+        {
+            $this->service = Service::findOrFail($this->serviceSelected);
+        }
         $this->step = 2;
     }
     public function info()
@@ -48,6 +54,23 @@ class ServiceBooking extends Component
             'message' => 'nullable|string',
         ]);
         $this->step = 3;
+    }
+    public function Send()
+    {
+        $booking = Booking::create([
+            'service_id' => $this->service->id,
+            'firstname' => $this->firstname,
+            'lastname' => $this->lastname,
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'check_in_date' =>$this->checkin,
+            'check_ou_date' =>$this->checkout,
+            'adults' =>$this->adults,
+            'children' => $this->children,
+            'additional_information' => $this->message,
+            'status' => 'Pending',
+        ]);
+        dd($booking);
     }
     public function render()
     {

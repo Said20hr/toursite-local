@@ -31,10 +31,10 @@
     </head>
     <body>
     <x-public.header/>
-    <div class="font-sans text-gray-900 antialiased min-h-screen">
+    <div class="font-sans text-gray-900">
             {{ $slot }}
+        <x-public.footer/>
         </div>
-     <x-public.footer/>
     <script href="{{asset('build/assets/app-549d8df7.js')}}"></script>
     @livewireScripts
     </body>

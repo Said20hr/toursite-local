@@ -10,10 +10,10 @@
                     @if(isset($service))
                         <input value="{{$service->title}}" name="service" disabled type="text" class="px-5 py-2 h-14 w-full xl:w-44 bg-white border border-gray-500 rounded-lg">
                     @else
-                        <select id="service" class="px-4 p-2 h-14 bg-white border border-gray-300 w-full xl:w-44 rounded-lg">
+                        <select id="service" wire:model="serviceSelected" class="px-4 p-2 h-14 bg-white border border-gray-300 w-full xl:w-44 rounded-lg">
                             <option value="" disabled>Choose Service</option>
                             @foreach($services as $service)
-                                <option value="{{$service->title}}">{{$service->title}}</option>
+                                <option value="{{$service->id}}">{{$service->title}}</option>
                             @endforeach
                         </select>
                     @endif
@@ -89,7 +89,7 @@
                                 </span>
                                 <div class="ml-12 pt-1.4 relative -top-1.5 w-auto lg:max-w-120">
                                     <h6 class="mb-0 font-semibold leading-normal dark:text-white text-sm text-slate-700">Service</h6>
-                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">22 DEC 7:20 AM</p>
+                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">{{$service->title}}</p>
                                 </div>
                             </div>
                             <div class="relative mb-4">
@@ -98,7 +98,7 @@
                                 </span>
                                 <div class="ml-12 pt-1.4 relative -top-1.5 w-auto lg:max-w-120 float-none">
                                     <h6 class="mb-0 font-semibold leading-normal dark:text-white text-sm text-slate-700">Check-In Date</h6>
-                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">22 DEC 7:21 AM</p>
+                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">{{$checkin}}</p>
                                 </div>
                             </div>
                             <div class="relative mb-4">
@@ -107,7 +107,7 @@
                                 </span>
                                 <div class="ml-12 pt-1.4 relative -top-1.5 w-auto lg:max-w-120">
                                     <h6 class="mb-0 font-semibold leading-normal dark:text-white text-sm text-slate-700">Check-Out Date</h6>
-                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">22 DEC 8:10 AM</p>
+                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">{{$checkout}}</p>
                                 </div>
                             </div>
                             <div class="relative mb-4">
@@ -116,7 +116,7 @@
                                 </span>
                                 <div class="ml-12 pt-1.4 relative -top-1.5 w-auto lg:max-w-120 float-none">
                                     <h6 class="mb-0 font-semibold leading-normal dark:text-white text-sm text-slate-700">Number Of Adults</h6>
-                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">22 DEC 4:54PM</p>
+                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">{{$adults}}</p>
                                 </div>
                             </div>
                             <div class="relative mb-4">
@@ -125,11 +125,40 @@
                                 </span>
                                 <div class="ml-12 pt-1.4 relative -top-1.5 w-auto lg:max-w-120 float-none">
                                     <h6 class="mb-0 font-semibold leading-normal dark:text-white text-sm text-slate-700">Number of Children</h6>
-                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">22 DEC 4:54PM</p>
+                                    <p class="mt-1 mb-0 font-semibold leading-tight text-xs text-slate-400">{{$children}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <ul class="flex flex-col pl-0 mb-0 rounded-lg">
+                        <li class="relative flex mb-2 rounded-xl bg-gray-50 dark:bg-slate-800 text-inherit">
+                            <div class="flex flex-col">
+                                <h6 class="mb-4 dark:text-white">Information details</h6>
+                                <div class="mb-2 mt-2 leading-tight text-base xl:mb-6">
+                                    First name : <span class="ml-2 font-semibold text-slate-700 dark:text-white/70">{{$firstname}}</span>
+                                </div>
+                                <div class="mb-2 leading-tight text-base xl:mb-6">
+                                    Last name : <span class="ml-2 font-semibold text-slate-700 dark:text-white/70">{{$lastname}}</span>
+                                </div>
+                                <div class="mb-2 leading-tight text-base xl:mb-6">
+                                    Email Address:
+                                    <span class="ml-2 font-semibold text-slate-700 dark:text-white/70">{{$email}}</span>
+                                </div>
+                                <div class="leading-tight text-base xl:mb-6">
+                                    Phone Number:
+                                    <span class="ml-2 font-semibold text-slate-700 dark:text-white/70">{{$phone}}</span>
+                                </div>
+                                <div class="leading-tight text-base xl:mb-6 mt-3">
+                                   <button type="button" wire:click="Send()" class="rounded-full hover:bg-opacity-80 transition-color duration-100 xl:px-6 px-4 xl:py-2 py-1.5 text-white bg-secondary border border-secondary text-lg">
+                                       {{__('Confirm and send your inquiry')}}
+                                   </button>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
