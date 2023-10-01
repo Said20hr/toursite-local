@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('email');
             $table->string('phone');
-            $table->string('address');
-            $table->string('country');
-            $table->string('city');
+            $table->string('address')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
             $table->date('check_in_date');
             $table->date('check_ou_date');
             $table->integer('adults')->default(1);

@@ -156,7 +156,7 @@ module.exports = {
             none: "none",
             spin: "spin 1s linear infinite",
             ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
-            ping_slow: 'ping 2s cubic-bezier(0, 0, 0.1, 2) infinite',
+            ping_slow: "ping 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
             pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
             bounce: "bounce 1s infinite",
             "fade-up": "fade-up 1.5s both",
@@ -428,6 +428,8 @@ module.exports = {
         fontFamily: {
             sans: ["Fira Sans Condensed"],
             serif: ["Nanum Brush Script"],
+            Cairo: ["Cairo"],
+            Lemonada: ["Lemonada"],
             body: ["Inter", "sans-serif"],
             awesome: ["FontAwesome"],
             "awesome-5-free": ["Font Awesome\\ 5 Free"],
@@ -1069,6 +1071,7 @@ module.exports = {
     variantOrder: ["first", "last", "odd", "even", "visited", "checked", "empty", "read-only", "group-hover", "group-focus", "focus-within", "hover", "focus", "focus-visible", "active", "disabled"],
 
     plugins: [
+        require('flowbite/plugin'),
         plugin(function ({ addComponents, addUtilities }) {
             addUtilities({
                 ".transform3d": {

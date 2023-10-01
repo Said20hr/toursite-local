@@ -12,7 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return redirect(app()->getLocale());
+});
+Route::prefix('{locale?}')
+    ->where(['locale' => '[a-zA-Z]{2}'])
+    ->middleware('setlocale')
+    ->group(function () {
 Route::get('/',[\App\Http\Controllers\HomePageController::class,'index'])->name('home-page');
 Route::get('/services',[\App\Http\Controllers\ServiceController::class,'index'])->name('services');
 Route::get('/service/{slug}',[\App\Http\Controllers\ServiceController::class,'show'])->name('service.show');
@@ -21,8 +27,8 @@ Route::get('/booking',[\App\Http\Controllers\ServiceController::class,'booking']
 Route::get('/booking/{slug}',[\App\Http\Controllers\ServiceController::class,'bookingService'])->name('booking.service');
 Route::get('/contact-us',[\App\Http\Controllers\ContactController::class,'index'])->name('contact');
 Route::post('/contact-us',[\App\Http\Controllers\ContactController::class,'store'])->name('contact.submit');
-
-Route::middleware([
+    });
+/*Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -31,7 +37,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
+*/
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

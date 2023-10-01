@@ -70,7 +70,8 @@ class ServiceBooking extends Component
             'additional_information' => $this->message,
             'status' => 'Pending',
         ]);
-        dd($booking);
+       $this->emit('saved');
+       $this->step = 4;
     }
     public function render()
     {

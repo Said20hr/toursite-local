@@ -1,8 +1,9 @@
 <x-guest-layout>
     <secion class="bg-white">
-        <img src="{{asset('images/edvin-johansson-rlwE8f8anOc-unsplash.webp')}}" class="w-full object-cover object-center relative h-screen w-full">
-        <div class="bg-background-dark bg-opacity-60 z-50 w-full flex flex-col justify-center text-center absolute inset-0 h-screen"></div>
+        <img src="{{asset('images/anse-source-d-argent-la-digue-seychelles-young-couple-men-women-tropical-beach-during-luxury-vacation-seychelles-tropical-beach-anse-source-d-argent-la-digue-seychelles.webp')}}" class="w-full object-cover object-center relative h-screen w-full">
+        <div class="bg-background-dark bg-opacity-30 z-50 w-full flex flex-col justify-center text-center absolute inset-0 h-screen"></div>
     </secion>
+    {{--
     <section class="py-20 bg-gray-200 w-full">
         <div class="container py-16 relative" >
             <div class="xl:flex gap-x-16">
@@ -35,6 +36,7 @@
             </div>
         </div>
     </section>
+    --}}
     <section>
         <iframe src="https://www.youtube-nocookie.com/embed/qbhoJNJexAw?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" allowfullscreen uk-responsive uk-video="automute: true"></iframe>
     </section>
