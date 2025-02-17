@@ -1,0 +1,128 @@
+@import url('uikit-3.15.22/css/uikit.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav-link
+{
+    @apply uppercase block h-full text-white hover:text-secondary text-base xl:text-lg pt-2
+}
+
+.nav-link-active
+{
+    @apply uppercase block h-full text-secondary hover:text-secondary text-base xl:text-lg pt-2
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent url("data:image/svg+xml;utf8,<svg fill='black' height='30' viewBox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat;
+    background-position-x: 98%;
+    background-position-y: 12px;
+    border-radius: 2px;
+    margin-right: 6rem;
+    padding-right: 4rem;
+}
+.bg-btn
+{
+    background: transparent linear-gradient(270deg, #fda007 0%, #fd7607 100%) 0% 0% no-repeat padding-box;
+}
+.bg-btn-secondary
+{
+    background: transparent linear-gradient(270deg, #3a3b74 0%, #1c1d4d 100%) 0% 0% no-repeat padding-box;
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 0 auto;
+    max-width: calc(33.333% - 2px);
+    margin: 1px;
+}
+
+.gallery-item:nth-of-type(3n+1) {
+    margin-left: 0;
+}
+
+.gallery-item:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+@media (max-width: 767px) {
+    .gallery-item {
+        max-width: calc(50% - 2px);
+    }
+
+    .gallery-item:nth-of-type(2n+1) {
+        margin-left: 0;
+    }
+
+    .gallery-item:nth-of-type(2n) {
+        margin-right: 0;
+    }
+}
+#check-group {
+    animation: 0.32s ease-in-out 1.03s check-group;
+    transform-origin: center;
+}
+
+#check-group #check {
+    animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
+    stroke-dasharray: 0, 75px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#check-group #outline {
+    animation: 0.38s ease-in outline;
+    transform: rotate(0deg);
+    transform-origin: center;
+}
+
+#check-group #white-circle {
+    animation: 0.35s ease-in 0.35s forwards circle;
+    transform: none;
+    transform-origin: center;
+}
+
+@keyframes outline {
+    from {
+        stroke-dasharray: 0, 345.576px;
+    }
+    to {
+        stroke-dasharray: 345.576px, 345.576px;
+    }
+}
+@keyframes circle {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+@keyframes check {
+    from {
+        stroke-dasharray: 0, 75px;
+    }
+    to {
+        stroke-dasharray: 75px, 75px;
+    }
+}
+@keyframes check-group {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
