@@ -17,6 +17,7 @@ class CreateGeneralSettings extends SettingsMigration
         $this->migrator->add('general-settings.owner_instagram', 'https://www.instagram.com/');
         $this->migrator->add('general-settings.owner_email', 'example@example.com');
         $this->migrator->add('general-settings.owner_phone', '+1234567890');
+        $this->migrator->add('general-settings.video', '');
 
     }
 }

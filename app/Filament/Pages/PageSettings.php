@@ -27,6 +27,7 @@ class PageSettings extends SettingsPage
                     ->schema([
                         FileUpload::make('video')
                             ->label('Vidéo')
+                            ->columnSpanFull()
                             ->directory('videos')
                             ->imagePreviewHeight('150')
                             ->enableOpen()
@@ -35,11 +36,13 @@ class PageSettings extends SettingsPage
                             ->acceptedFileTypes(['video/*']),
                         Forms\Components\TextInput::make('title')
                             ->label('Site Title')
+                            ->columnSpanFull()
                             ->default($settings->title ?? '')
                             ->required(),
 
                         Forms\Components\Textarea::make('description')
                             ->label('Site Description')
+                            ->columnSpanFull()
                             ->default($settings->description ?? '')
                             ->required(),
 
@@ -67,7 +70,6 @@ class PageSettings extends SettingsPage
                     ])
                     ->columns(2),
                 Forms\Components\Card::make()
-                    ->tex
                     ->schema([
                         Forms\Components\TextInput::make('owner_facebook') // Facebook URL
                         ->label('Facebook URL owner')

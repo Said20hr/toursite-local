@@ -16,6 +16,7 @@ class GeneralSettings extends Settings
     public ?string $owner_instagram; // Instagram URL
     public ?string $owner_email;     // Email Address
     public ?string $owner_phone;     // Phone Number
+    public ?string $video;     // Phone Number
 
     public static function group(): string
     {

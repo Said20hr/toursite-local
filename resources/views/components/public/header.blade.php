@@ -52,7 +52,7 @@
                             <div uk-dropdown="animation: slide-top; animate-out: true; duration:300" class="p-0 w-full">
                                 <ul class="p-1 border">
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'en']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('en') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/gb.png"
                                                 srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x"
@@ -62,7 +62,7 @@
                                             <span>English</span>
                                         </a></li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'fr']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('fr') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/fr.png"
                                                 srcset="https://flagcdn.com/32x24/fr.png 2x,https://flagcdn.com/48x36/fr.png 3x"
@@ -73,7 +73,7 @@
                                         </a>
                                     </li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'ru']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('ru') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/ru.png"
                                                 srcset="https://flagcdn.com/32x24/ru.png 2x,https://flagcdn.com/48x36/ru.png 3x"
@@ -84,7 +84,7 @@
                                         </a>
                                     </li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'gr']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('gr') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/gr.png"
                                                 srcset="https://flagcdn.com/32x24/gr.png 2x,https://flagcdn.com/48x36/gr.png 3x"
@@ -95,7 +95,7 @@
                                         </a>
                                     </li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'sj']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('sj') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/no.png"
                                                 srcset="https://flagcdn.com/32x24/no.png 2x,https://flagcdn.com/48x36/no.png 3x"
@@ -106,7 +106,7 @@
                                         </a>
                                     </li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'it']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('it') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/it.png"
                                                 srcset="https://flagcdn.com/32x24/it.png 2x,https://flagcdn.com/48x36/it.png 3x"
@@ -117,7 +117,7 @@
                                         </a>
                                     </li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'es']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('es') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/es.png"
                                                 srcset="https://flagcdn.com/32x24/es.png 2x,https://flagcdn.com/48x36/es.png 3x"
@@ -128,7 +128,7 @@
                                         </a>
                                     </li>
                                     <li class="p-2 border hover:bg-gray-100  mb-3">
-                                        <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), ['locale' => 'ar']) }}" class="flex justify-start items-center gap-x-3">
+                                        <a href="{{ \App\Router::localizedRoute('ar') }}" class="flex justify-start items-center gap-x-3">
                                             <img
                                                 src="https://flagcdn.com/16x12/sa.png"
                                                 srcset="https://flagcdn.com/32x24/sa.png 2x,https://flagcdn.com/48x36/sa.png 3x"

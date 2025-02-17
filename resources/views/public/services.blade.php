@@ -27,7 +27,7 @@
                                 {{$service->excerpt}}
                             </p>
                             <div class="flex justify-center mb-3">
-                                <a href="{{ route('service.show', ['slug' => $service->slug, 'locale' => app()->getLocale()]) }}" class="rounded-md hover:bg-opacity-80 bg-elementary text-white px-3 py-2 text-lg">Read More</a>
+                                <a href="{{route('service.show',$service->slug)}}" class="rounded-md hover:bg-opacity-80 bg-elementary text-white px-3 py-2 text-lg">Read More</a>
                             </div>
 
                         </div>

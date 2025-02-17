@@ -44,7 +44,7 @@ class ServiceController extends Controller
         $services = Service::all();
         return view('public.booking',compact('services'));
     }
-    public function bookingService($slug)
+    public function bookingService($lang,$slug)
     {
         $service = Service::where('slug',$slug)->firstOrFail();
         return view('public.booking',compact('service'));
