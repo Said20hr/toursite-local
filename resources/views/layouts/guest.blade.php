@@ -31,6 +31,7 @@
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
         <!-- Scripts -->
           @vite(['resources/css/app.css', 'resources/js/app.js'])
+
         <link rel="stylesheet" href="{{asset('build/assets/app-4d265f7d.css')}}">
         @livewireStyles
         <style>

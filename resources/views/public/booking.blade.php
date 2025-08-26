@@ -43,7 +43,7 @@
     --}}
     <section>
         <video class="w-full h-screen object-cover object-center" autoplay muted loop playsinline>
-            <source src="{{ asset('storage/' . setting('video')) }}" type="video/{{ $extension }}">
+            <source src="{{ asset('storage/' . setting('video')) }}" type="video/*">
             Your browser does not support the video tag.
         </video>
     </section>
